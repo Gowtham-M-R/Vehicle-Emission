@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Vehicle Emission Monitoring System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      justify-content: space-between;
+    }
+
+    .faq-column {
+      max-width: 50%;
+      width: 100%;
+      margin: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .faq-heading {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0e0e0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .faq-question,
+    .faq-answer {
+      padding: 20px;
+    }
+
+    .faq-question {
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background-color: #2980b9;
+    }
+
+    .faq-answer {
+      display: none;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-toggle {
+      font-size: 24px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px;
+      font-family: sans-serif;
+      font-size: 30px;
+    }
+
+    .main {
+      display: flex;
+    }
+
+    /* Media query for mobile view */
+    @media (max-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main {
+        display: block;
+      }
+
+      .faq-column {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      .faq-item {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .faq-question {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .faq-answer {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .faq-toggle {
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 10px;
+      }
+
+      .faq-column {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>FAQs - Vehicle Emission Monitoring System</h1>
+
+<div class="main">
+  <div class="faq-column">
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(1)">
+        <span class="faq-number">1</span>
+        What is a vehicle emission monitoring system?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer1">
+        A vehicle emission monitoring system measures and tracks pollutants emitted by vehicles, such as CO, CO2, and other harmful gases. It helps reduce air pollution by identifying high-emission vehicles and promoting corrective actions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(2)">
+        <span class="faq-number">2</span>
+        How does the system detect emissions?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer2">
+        The system uses sensors like MQ-7 and MQ-135 to measure pollutants such as CO, NH3, and benzene. These sensors collect real-time data on emission levels, which are processed by a microcontroller and displayed on a web interface.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(3)">
+        <span class="faq-number">3</span>
+        What pollutants can this system measure?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer3">
+        The system can measure carbon monoxide (CO), carbon dioxide (CO2), ammonia (NH3), benzene, and particulate matter (PM 2.5 and PM10), among other pollutants.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(4)">
+        <span class="faq-number">4</span>
+        How does this system help reduce air pollution?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer4">
+        By continuously monitoring vehicle emissions, the system identifies areas with high pollution and helps reroute traffic. Authorities can also identify vehicles exceeding acceptable limits and take corrective actions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(5)">
+        <span class="faq-number">5</span>
+        How is the data visualized?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer5">
+        The data is sent to a cloud platform and displayed on a web interface. It shows pollutant levels, affected areas on a map, and other key metrics to help officials and the public understand the air quality.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-column">
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(6)">
+        <span class="faq-number">6</span>
+        Can this system be used for traffic management?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer6">
+        Yes, the system can be integrated into smart traffic management systems to dynamically adjust traffic flow based on pollution levels in certain areas, thereby reducing congestion and emissions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(7)">
+        <span class="faq-number">7</span>
+        How does it alert authorities about high pollution levels?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer7">
+        The system sends real-time alerts via SMS or an app to authorities when pollution exceeds safe limits. It also highlights affected areas on a map for immediate action.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(8)">
+        <span class="faq-number">8</span>
+        How accurate are the sensors used in the system?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer8">
+        The MQ-7 and MQ-135 sensors are highly sensitive and calibrated to detect even minute changes in pollutant levels, ensuring reliable and precise measurements.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(9)">
+        <span class="faq-number">9</span>
+        Is the system scalable for larger cities?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer9">
+        Yes, the system can be deployed in small towns or large cities with extensive vehicle fleets. It is easily scalable with multiple sensors and centralized monitoring.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(10)">
+        <span class="faq-number">10</span>
+        What are the long-term benefits of using this system?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer" id="answer10">
+        The system helps in reducing air pollution, improving public health, ensuring compliance with emission norms, and creating smarter, cleaner urban environments.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleAnswer(questionNumber) {
+    var answerId = 'answer' + questionNumber;
+    var answerElement = document.getElementById(answerId);
+    var faqItem = answerElement.parentElement;
+
+    if (faqItem.classList.contains('active')) {
+      faqItem.classList.remove('active');
+    } else {
+      faqItem.classList.add('active');
+    }
+  }
+</script>
+</body>
+</html>
